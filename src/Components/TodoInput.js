@@ -29,8 +29,10 @@ const todoinput = (props) => {
                         <button type="submit"
                             disabled={isitems}
                             className=
-                            {props.isitem ? "btn btn-block btn-success mt-3" : 'btn btn-block btn-primary mt-3'}>{props.isitem ? 'Edit and Add Note' : ""}
-                            {isitems ? "Disabled" : "Add Note's"}
+                            {props.isitem ? "btn btn-block btn-success mt-3" : 'btn btn-block btn-primary mt-3'}
+                        >
+                            {props.isitem ? 'Edit and ' : ""}
+                            {isitems ? "Disabled" : "Add Note"}
                         </button>
                         {/* <input type="submit" value="Click To Add Note's" className='btn btn-block btn-primary mt-3' /> */}
 
