@@ -2,6 +2,8 @@ import React from 'react'
 
 const todoinput = (props) => {
     // const { todoinputHandler, inputValue } = props
+    const isitems = props.itemsnull;
+
     return (
         <div className='card card-body mt-5'>
             <div className='form-group'>
@@ -21,9 +23,12 @@ const todoinput = (props) => {
                                 placeholder='Type to add note'
                                 value={props.inputValue}
 
+
                             />
                         </div>
-                        <button type="submit" className=
+                        <button type="submit"
+                            disabled={isitems}
+                            className=
                             {props.isitem ? "btn btn-block btn-success mt-3" : 'btn btn-block btn-primary mt-3'}>{props.isitem ? 'Edit and Add Note' : "Click To Add Note's"}</button>
                         {/* <input type="submit" value="Click To Add Note's" className='btn btn-block btn-primary mt-3' /> */}
 

@@ -11,7 +11,8 @@ class App extends Component {
     items: [],
     item: '',
     id: uniqid(),
-    isitem: false
+    isitem: false,
+    isbuttons: true
   }
 
   todoinputHandler = (event) => {
@@ -64,6 +65,11 @@ class App extends Component {
   }
 
   render() {
+    if (this.state.item === '') {
+      this.state.isbuttons = true;
+    } else {
+      this.state.isbuttons = false;
+    }
     return (
       <div className='container'>
         <div className="row">
@@ -73,6 +79,7 @@ class App extends Component {
             <Todoinput click={this.todoinputHandler}
               submititem={this.AddtodoHandler}
               inputValue={this.state.item}
+              itemsnull={this.state.isbuttons}
               isitem={this.state.isitem}
 
             />
