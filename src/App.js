@@ -67,6 +67,7 @@ class App extends Component {
   render() {
     if (this.state.item === '') {
       this.state.isbuttons = true;
+
     } else {
       this.state.isbuttons = false;
     }
